@@ -1,0 +1,21 @@
+Kutter Winter-Training – App-Paket
+
+Inhalt
+  index.html            die App
+  manifest.webmanifest  macht sie installierbar ("Zum Startbildschirm")
+  sw.js                 Offline-Betrieb
+  apple-touch-icon.png  Symbol für iPhone
+  icons/                Symbole (192, 512, maskierbar, SVG)
+
+Verwenden
+  1. Alle Dateien zusammen auf einen Webserver mit HTTPS legen
+     (z. B. GitHub Pages, Netlify). Die Ordnerstruktur nicht ändern.
+  2. Die Adresse im Handy-Browser öffnen und "Zum Startbildschirm
+     hinzufügen" wählen.
+
+Hinweis
+  Direkt aus der Zip oder per content://-Adresse geöffnet, läuft nur
+  index.html; Installation und Offline-Betrieb gehen nur über https.
+  Die Team-Synchronisierung (Trainer/Sportler) funktioniert nur im
+  veröffentlichten Claude-Link, nicht auf einem eigenen Server.
+  Dort speichert jedes Handy nur für sich.
