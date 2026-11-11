@@ -1,6 +1,6 @@
-const CACHE = "kutter-v2";
+const CACHE = "kutter-v3";
 const FILES = ["./", "./index.html", "./manifest.webmanifest", "./apple-touch-icon.png",
-  "./icons/icon-192.png", "./icons/icon-512.png", "./icons/icon-maskable-512.png", "./icons/icon.svg"];
+  "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png", "./icon.svg"];
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
 });
