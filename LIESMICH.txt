@@ -26,6 +26,8 @@ Firebase (Google), Tarif "Spark" – ohne Kreditkarte.
    Wer den Link öffnet, wird automatisch mit der Mannschaft verbunden.
 
 Gut zu wissen
+- Sicherheit: Content-Security-Policy, kein Einbetten in fremde Seiten, keine externen Schriften;
+  alle Daten aus Speicher, Sicherung und Mannschaft werden vor der Anzeige geprüft.
 - Der apiKey ist kein Passwort; geschützt wird über die Regeln und den Mannschafts-Code.
 - Geteilt werden nur Vorname und Kennzahlen (Rang, Trainingstage, Kilometer,
   Verbesserung in %, Bestleistungen der letzten 14 Tage). Tagebuch und Tagesform bleiben auf dem Handy.

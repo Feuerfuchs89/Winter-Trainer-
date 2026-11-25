@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="de"><head><meta charset="utf-8"><title>LSC Winter-Training</title>
+<html lang="de"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><script>if(window.top!==window.self&&/\.github\.io$/.test(location.hostname)){document.documentElement.style.display="none";try{window.top.location=window.self.location.href}catch(e){}}</script><title>LSC Winter-Training</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#191E2E" media="(prefers-color-scheme: dark)"><link rel="icon" type="image/png" href="fav.png"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="LSC Training">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
 :root{--c1:#0089A0;--c2:#B87700;--c3:#7A4FB0;--c4:#C8402F;--bg:#F5F6F8;--card:#fff;--ink:#1A2140;--mute:#6B7189;--line:#E6E8EE;--soft:#F0F2F6;--acc:#E0A23A;--acc-ink:#1A2140;--pri:#1F2A68;--pri-ink:#fff;--tint:#F3F4F9;--navy:#0F195E;--navy2:#22328F;--sea:#3B4E9C;--red:#C8402F;--sh:0 1px 2px rgba(20,25,50,.04),0 2px 10px rgba(20,25,50,.04)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--c1:#2AA8BA;--c2:#BF8A12;--c3:#A487E6;--c4:#E06A58;--bg:#111522;--card:#191E2E;--ink:#E8EAF2;--mute:#9AA0B5;--line:#2A3044;--soft:#232940;--pri:#7D8FD6;--pri-ink:#111522;--tint:#1E2436;--navy:#070C2B;--navy2:#16205E;--sea:#8E9EDC;--red:#FF8A78;--sh:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25)}}
 :root[data-theme="dark"]{--c1:#2AA8BA;--c2:#BF8A12;--c3:#A487E6;--c4:#E06A58;--bg:#111522;--card:#191E2E;--ink:#E8EAF2;--mute:#9AA0B5;--line:#2A3044;--soft:#232940;--pri:#7D8FD6;--pri-ink:#111522;--tint:#1E2436;--navy:#070C2B;--navy2:#16205E;--sea:#8E9EDC;--red:#FF8A78;--sh:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25)}
 html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 Barlow,system-ui,-apple-system,Segoe UI,sans-serif;padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
-h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",sans-serif;margin:0;font-weight:700;letter-spacing:.01em}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+h1,h2,h3{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;margin:0;font-weight:700;letter-spacing:-.01em}
 h3{font-size:21px;line-height:1.15}
 /* Kopfzeile */
 header.top{position:relative;display:flex;align-items:center;gap:10px;padding:calc(12px + env(safe-area-inset-top,0px)) 16px 12px;background:var(--card);color:var(--ink);border-bottom:1px solid var(--line)}
@@ -27,7 +27,7 @@ main{padding:4px 14px;max-width:640px;margin:0 auto;position:relative}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px;margin:12px 0;box-shadow:var(--sh)}
 .blk{border-left:3px solid var(--pri)}
 .blk h3{font-size:21px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
-.blk h3 small{font:500 13px Barlow,sans-serif;color:var(--mute)}
+.blk h3 small{font:500 13px system-ui,sans-serif;color:var(--mute)}
 .ex{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line);min-height:52px}
 .ex:first-of-type{border-top:0}.ex.done span{color:var(--mute)}
 /* Bedienelemente */
@@ -64,7 +64,7 @@ details.card>summary{font-weight:700;cursor:pointer;list-style:none;display:flex
 .lr{border-top:1px solid var(--line);padding:10px 0}.lr:first-of-type{border-top:0}.lr .f{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:8px}.lr label{margin:4px 0 2px;font-size:12px}
 .stp{display:grid;grid-template-columns:44px 1fr 44px;gap:4px}.stp button{padding:0;min-height:46px;font-size:22px}.stp input{text-align:center;padding:8px 2px}.last{font-size:12px;color:var(--mute)}
 #tm{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--navy);color:#fff;padding:20px 16px calc(20px + env(safe-area-inset-bottom,0px));display:none;text-align:center;border-radius:26px 26px 0 0;box-shadow:0 -10px 30px rgba(0,0,0,.3)}
-#tm.on{display:block}#tm .big{font:700 80px/1.1 "Barlow Condensed",sans-serif}#tm .ph{font:700 24px "Barlow Condensed",sans-serif;color:rgba(255,255,255,.8)}#tm .flex{margin-top:12px}#tm button{background:rgba(255,255,255,.12);color:#fff}#tm button.pri{background:#fff;color:var(--navy)}
+#tm.on{display:block}#tm .big{font:700 80px/1.1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}#tm .ph{font:700 24px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:rgba(255,255,255,.8)}#tm .flex{margin-top:12px}#tm button{background:rgba(255,255,255,.12);color:#fff}#tm button.pri{background:#fff;color:var(--navy)}
 .wk{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;text-align:center;font-size:12px;color:var(--mute)}.wk i{display:block;height:34px;line-height:34px;border-radius:10px;background:var(--soft);font-style:normal;font-size:16px}.wk i.y{background:var(--pri);color:var(--pri-ink)}
 /* Home */
 .hello{background:transparent;border:0;box-shadow:none;padding:6px 2px 0;margin-top:14px}
@@ -75,7 +75,7 @@ details.card>summary{font-weight:700;cursor:pointer;list-style:none;display:flex
 .qa button.main b{background:var(--pri);color:var(--pri-ink)}
 .hero{}.hero .nx{background:var(--tint)!important}
 .kick{color:var(--mute);font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
-.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:12px 0}.tile{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px 14px;box-shadow:var(--sh)}.tile b{display:block;font:700 32px/1.05 "Barlow Condensed",sans-serif;color:var(--ink)}.tile span{font-size:13px;color:var(--mute)}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:12px 0}.tile{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px 14px;box-shadow:var(--sh)}.tile b{display:block;font:700 32px/1.05 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink)}.tile span{font-size:13px;color:var(--mute)}
 .stand{}.stand h3{font-size:24px}.stand ul{margin:8px 0 0;padding-left:20px}.stand li{margin:5px 0}
 .more summary{cursor:pointer;color:var(--sea);font-weight:600;font-size:14px;margin-top:6px}
 .pb{display:grid;grid-template-columns:1fr 84px auto;gap:8px;align-items:center;padding:10px 0;border-top:1px solid var(--line);cursor:pointer}.pb:first-of-type{border-top:0}.pb.on .nm span{font-weight:700}.pb.on{box-shadow:inset 3px 0 0 var(--pri);padding-left:10px}
@@ -163,10 +163,10 @@ function distTxt(e,v){return String(Math.round(v*100)/100).replace(".",",")+" "+
 var NEW3=["Klimmzüge","Klimmzüge Untergriff","Dips","Hängendes Knieheben"];
 var S,tab="home",sel={ex:"",ath:"",cat:"all"};
 function uid(){return Math.random().toString(36).slice(2,9)}
-function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function esc(t){return String(t).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
 function lib(id){return S.lib.filter(function(e){return e.id===id})[0]}
 function today(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
-function fd(s){var p=s.split("-");return p[2]+"."+p[1]+"."}
+function fd(s){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(String(s));return m?m[3]+"."+m[2]+".":""}
 function toast(t){var e=document.createElement("div");e.className="toast";e.textContent=t;document.body.appendChild(e);setTimeout(function(){e.remove()},1800)}
 function newPlan(cat){if(!S.plan)S.plan={};
  if(cat){S.plan[cat]=gen(cat)}else{var p={};ORDER.forEach(function(c){p[c]=gen(c)});S.plan=p}
@@ -179,14 +179,14 @@ function setTab(t){tab=t;sel.fp=0;if(t==="home")sel.hv=null;render()}
 function vTeamLocal(){
  var h='<div class="card"><h3>Sportler</h3>'+(S.ath.length?S.ath.map(function(a){return'<div class="ex"><span>'+esc(a.name)+'</span><button class="sm" onclick="delAth(\''+a.id+'\')">Entfernen</button></div>'}).join(""):'<div class="empty">Noch niemand angelegt.</div>');
  h+='<div class="flex" style="margin-top:8px"><input id="na" placeholder="Name"><button class="pri" style="flex:0 0 auto" onclick="addAth()">Hinzufügen</button></div></div>';
- h+=vCloudCard()+vSeasonCard()+vExForm()+vCatAdmin();
+ h+=vCloudCard()+vSeasonCard()+vExForm()+vCatAdmin()+vPrivacy();
  h+='<div class="card"><h3>Datensicherung</h3><p style="color:var(--mute);font-size:14px;margin:4px 0">Die Daten liegen nur in diesem Browser. Kopiere den Text als Sicherung oder füge eine Sicherung ein.</p><textarea id="bk">'+esc(JSON.stringify(S))+'</textarea><div class="flex" style="margin-top:8px"><button onclick="cp()">Kopieren</button><button onclick="imp()">Einfügen &amp; laden</button></div></div>';
  return h}
 function addAth(){var n=document.getElementById("na").value.trim();if(!n)return;S.ath.push({id:uid(),name:n});save();render()}
 function delAth(id){if(!confirm("Sportler und alle seine Einträge löschen?"))return;S.ath=S.ath.filter(function(a){return a.id!==id});S.logs=S.logs.filter(function(l){return l.a!==id});save();render()}
 // addEx: siehe Eigene Übungen
 function cp(){var t=document.getElementById("bk");t.select();try{navigator.clipboard.writeText(t.value);toast("Kopiert")}catch(e){document.execCommand("copy")}}
-function imp(){try{var o=JSON.parse(document.getElementById("bk").value);if(!o.ath||!o.lib||!o.logs)throw 0;S=o;save();render();toast("Geladen")}catch(e){toast("Text ist keine gültige Sicherung")}}
+function imp(){try{var o=JSON.parse(document.getElementById("bk").value);if(!o.ath||!o.lib||!o.logs)throw 0;S=o;sanitizeS();fixCats();save();render();toast("Geladen")}catch(e){toast("Text ist keine gültige Sicherung")}}
 function el(i){return document.getElementById(i)}
 function mode(e){return e.typ==="dist"?"dist":e.typ==="dauer"?"dauer":e.cat==="knoten"?"zeit":e.cat==="wurf"?"weite":"sum"}
 function load(){try{var r=localStorage.getItem("kutter1");if(r)S=JSON.parse(r)}catch(e){}
@@ -271,7 +271,7 @@ function vChart0(){
 var DBM=null,ME=null,ISTR=false,KEY="kutter1",subs={},cfgT=null,hasMe=false,ready=false,cfgSeen=false;
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}
  if(DBM&&ISTR){clearTimeout(cfgT);cfgT=setTimeout(function(){DBM.doc("team/config").set({lib:S.lib,plan:S.plan||null,pick:S.pick||null,tpl:S.tpl||[]}).catch(function(){})},700)}}
-function fixCats(){var ch=0;S.lib.forEach(function(e){if(e.cat==="tabata"){e.cat="warm";S.plan=null}});
+function fixCats(){sanitizeS();var ch=0;S.lib.forEach(function(e){if(e.cat==="tabata"){e.cat="warm";S.plan=null}});
  NEW3.forEach(function(n){if(!S.lib.some(function(e){return e.name===n})){var d=DEF.filter(function(x){return x[1]===n})[0];S.lib.push({id:uid(),cat:d[0],name:n,unit:d[2]});ch=1}});
  NEWX.forEach(function(x){if(!S.lib.some(function(e){return e.name===x[1]})){S.lib.push(mkX(x));ch=1}});
  if(typeof mergeExt==="function"&&mergeExt())ch=1;
@@ -353,7 +353,7 @@ function joinTeam(){var n=el("jn").value.trim();if(!n)return;DBM.doc("members/"+
 function delMember(id){if(!confirm("Sportler:in aus dem Team entfernen? Die Einträge bleiben erhalten."))return;DBM.doc("members/"+id).delete().catch(function(){toast("Entfernen nicht möglich")})}
 function vTeam(){
  if(!DBM)return vTeamLocal()+vExport();
- if(!ISTR)return'<div class="card"><h3>Dein Name</h3><input id="jn" value="'+esc(S.ath[0]?S.ath[0].name:"")+'"><button class="pri" style="width:100%;margin-top:10px" onclick="joinTeam()">Namen speichern</button></div>'+vExForm();
+ if(!ISTR)return'<div class="card"><h3>Dein Name</h3><input id="jn" value="'+esc(S.ath[0]?S.ath[0].name:"")+'"><button class="pri" style="width:100%;margin-top:10px" onclick="joinTeam()">Namen speichern</button></div>'+vExForm()+vPrivacy();
  var t=vTeamLocal(),i=t.indexOf("Übung hinzufügen"),j=t.indexOf("Datensicherung");
  var h='<div class="card"><h3>Sportler im Team</h3>'+(S.ath.length?S.ath.map(function(a){return'<div class="ex"><span>'+esc(a.name)+'</span><button class="sm" onclick="delMember(\''+a.id+'\')">Entfernen</button></div>'}).join(""):'<div class="empty">Noch niemand beigetreten. Teile den Link dieser App mit dem Team. Beim ersten Öffnen geben alle ihren Namen ein.</div>')+'</div>';
  return h+t.slice(t.lastIndexOf('<div class="card">',i),t.lastIndexOf('<div class="card">',j))+vExport()}
@@ -924,7 +924,7 @@ function vErfolge(){var aid=meId(),st=stats(aid),bs=badges(aid,st),p=journeyPos(
  var h='<div class="card"><button class="sm" onclick="sel.hv=null;render()">← Zurück zur Übersicht</button></div>';
  h+='<div class="card"><div class="kick">Dein Rang</div><h3>⚓ '+st.rank+' · '+st.pts+' Punkte</h3><table style="margin-top:8px"><tr><td>Trainingstage</td><td>'+st.days+' × 10</td></tr><tr><td>Bestleistungen</td><td>'+st.prs+' × 20</td></tr><tr><td>Tagebuch-Einträge</td><td>'+st.di+' × 3</td></tr><tr><td>Fitness-Checks</td><td>'+st.te+' × 15</td></tr><tr><td>Daumen hoch gegeben</td><td>'+st.ku+' × 2</td></tr></table>'+
   '<div style="margin-top:10px;font-size:14px">'+RANKS.map(function(r,i){return'<span style="display:inline-block;margin:3px 8px 3px 0;'+(i===st.ri?"font-weight:700;color:var(--pri)":i<st.ri?"":"color:var(--mute)")+'">'+(i<=st.ri?"✓ ":"")+r[1]+' <span class="last">'+r[0]+'</span></span>'}).join("")+'</div></div>';
- h+='<div class="card"><h3>Abzeichen</h3><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px 8px;margin-top:10px">'+bs.map(function(b){return'<div style="text-align:center;opacity:'+(b.e?1:.5)+'"><div style="width:52px;height:52px;margin:0 auto;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 15px \'Barlow Condensed\',sans-serif;'+(b.e?"background:var(--pri);color:var(--pri-ink)":"border:2px dashed var(--line);color:var(--mute)")+'">'+b[1]+'</div><div style="font-size:12px;margin-top:4px;font-weight:600;line-height:1.2">'+b[0]+'</div>'+(b[2]?'<div class="last" style="font-size:11px">'+b[2]+'</div>':'')+'</div>'}).join("")+'</div></div>';
+ h+='<div class="card"><h3>Abzeichen</h3><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px 8px;margin-top:10px">'+bs.map(function(b){return'<div style="text-align:center;opacity:'+(b.e?1:.5)+'"><div style="width:52px;height:52px;margin:0 auto;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 15px \system-ui,sans-serif;'+(b.e?"background:var(--pri);color:var(--pri-ink)":"border:2px dashed var(--line);color:var(--mute)")+'">'+b[1]+'</div><div style="font-size:12px;margin-top:4px;font-weight:600;line-height:1.2">'+b[0]+'</div>'+(b[2]?'<div class="last" style="font-size:11px">'+b[2]+'</div>':'')+'</div>'}).join("")+'</div></div>';
  h+='<div class="card"><h3>Virtuelle Reise</h3><p class="last" style="margin:2px 0 6px">Vom Cospudener See bis Sassnitz (ca. 750 km). Es zählen Rudern, Ergo, Laufen und Schwimmen (×3); Rad zählt ein Drittel, Walken die Hälfte.</p><p style="margin:0 0 6px;font-size:14px">'+journeyText(st.km)+'</p>'+journeySvg(st.km)+'</div>';
  h+='<div class="card"><h3>Serie & Joker</h3><p style="margin:6px 0 0;font-size:14px">Jede Woche mit mindestens einem Training verlängert deine Serie (aktuell <b>'+st.sk.n+'</b>). Pro Monat gibt es einen Joker: Eine verpasste Woche – z. B. wegen Krankheit – unterbricht die Serie dann nicht.</p></div>';
  return h}
@@ -957,10 +957,10 @@ function clSummary(){var aid=meId(),me=S.ath.filter(function(a){return a.id===ai
  return{n:me?me.name:"?",rk:CS.rk!==false,pts:st.pts,ri:st.ri,d28:trainDays(aid).filter(function(d){return ago(d)<28}).length,sk:st.sk.n,imp:imp.length?Math.round(imp.reduce(function(s,x){return s+x},0)/imp.length):null,prs:prs.slice(0,6),fo:fo,km:ch&&ch.start?kmSince(aid,ch.start):0,u:Date.now()}}
 var clT=null;function clSoon(){if(!clOn())return;clearTimeout(clT);clT=setTimeout(function(){clSync(true)},4000)}
 function clSync(push){if(!clOn()||CL.busy)return Promise.resolve();CL.busy=true;
- return clList("meta").then(function(ms){CL.meta={};ms.forEach(function(m){CL.meta[m._id]=m})})
+ return clList("meta").then(function(ms){CL.meta={};ms.forEach(function(m){var c=clCleanMeta(m);if(c)CL.meta[m._id]=c})})
  .then(function(){return push&&meId()?clReq("/members/"+CS.uid,{method:"PATCH",body:JSON.stringify(jf(clSummary()))}):null})
  .then(function(){return Promise.all([clList("members"),clList("kudos")])})
- .then(function(r){var lim=Date.now()-45*864e5;CL.members=r[0].filter(function(m){return(m.u||0)>lim});CL.kudos=r[1].filter(function(k){return(k.t||0)>Date.now()-30*864e5});CL.err="";CL.last=Date.now()})
+ .then(function(r){var lim=Date.now()-45*864e5;CL.members=r[0].map(clCleanM).filter(function(m){return m._id&&m.u>lim});CL.kudos=r[1].map(clCleanK).filter(function(k){return k.t>Date.now()-30*864e5});CL.err="";CL.last=Date.now()})
  .catch(function(e){CL.err=String(e&&e.message||e)})
  .then(function(){CL.busy=false;var a=document.activeElement;if(!(a&&/INPUT|TEXTAREA|SELECT/.test(a.tagName))&&(tab==="plan"||tab==="home"||tab==="team"))refresh()})}
 function clCode(){var c="ABCDEFGHJKLMNPQRSTUVWXYZ23456789",r=new Uint8Array(8),s="";(window.crypto||window.msCrypto).getRandomValues(r);for(var i=0;i<8;i++)s+=c.charAt(r[i]%c.length);return"LSC-"+s.slice(0,4)+"-"+s.slice(4)}
@@ -1004,6 +1004,36 @@ function vTeamCloud(){if(DBM)return"";
  return h}
 function homeTeam(){var ch=clOn()&&CL.meta.challenge;if(!ch||!ch.target)return vTeamGoal(1);var tk=0;CL.members.forEach(function(m){tk+=m.km||0});
  return'<div class="card"><div class="kick">Mannschaft</div><h3>'+esc(ch.title)+'</h3><div class="bar"><i style="width:'+Math.min(100,Math.round(tk/ch.target*100))+'%"></i></div><p class="last" style="margin:4px 0 0">'+nf(tk)+' von '+nf(ch.target)+' km · '+CL.members.length+' Mitglieder</p><button class="sm" style="margin-top:10px" onclick="setTab(\'plan\')">Zur Mannschaft</button></div>'}
+/* ===== Eingaben aus Speicher, Sicherung und Mannschaft prüfen ===== */
+function cid(x){return String(x==null?"":x).replace(/[^A-Za-z0-9_-]/g,"").slice(0,40)}
+function okD(d){return/^\d{4}-\d{2}-\d{2}$/.test(String(d))}
+function cn(v,mx){v=+v;return isFinite(v)?Math.max(-mx,Math.min(mx,v)):0}
+function cs(v,n){return String(v==null?"":v).slice(0,n)}
+function ckeys(o){var r={};if(o&&typeof o==="object")Object.keys(o).forEach(function(k){var c=cid(k);if(c&&k!=="__proto__")r[c]=o[k]});return r}
+function sanitizeS(){if(!S||typeof S!=="object")return;["ath","lib","logs","diary","tpl"].forEach(function(k){if(!Array.isArray(S[k]))S[k]=[]});
+ S.ath=S.ath.filter(Boolean);S.ath.forEach(function(a){a.id=cid(a.id);a.name=cs(a.name,60)});
+ S.lib=S.lib.filter(Boolean);S.lib.forEach(function(e){e.id=cid(e.id);e.name=cs(e.name,60)});
+ S.logs=S.logs.filter(function(l){return l&&okD(l.d)});S.logs.forEach(function(l){l.a=cid(l.a);l.ex=cid(l.ex);["s","v","kg","t","rpe"].forEach(function(f){if(l[f]!=null)l[f]=cn(l[f],1e7)})});
+ S.diary=S.diary.filter(function(x){return x&&okD(x.d)});S.diary.forEach(function(x){x.id=cid(x.id);x.a=cid(x.a);["dur","rpe","mood"].forEach(function(f){if(x[f]!=null)x[f]=cn(x[f],1e4)})});
+ var cp=function(pl){var r={};if(pl&&typeof pl==="object")Object.keys(pl).forEach(function(c){if(CATS[c])r[c]=Array.isArray(pl[c])?pl[c].map(cid):[]});return r};
+ if(S.plan)S.plan=cp(S.plan);S.tpl.forEach(function(t){t.id=cid(t.id);t.name=cs(t.name,60);t.plan=cp(t.plan)});
+ if(S.att)S.att=okD(S.att.d)&&Array.isArray(S.att.ids)?{d:S.att.d,ids:S.att.ids.map(cid)}:null;
+ if(S.pick)S.pick=ckeys(S.pick);
+ ["goals","tests","ready","badges","wrSeen"].forEach(function(k){if(S[k])S[k]=ckeys(S[k])});
+ if(S.goals)Object.keys(S.goals).forEach(function(k){var g=S.goals[k];if(!g||typeof g!=="object"){delete S.goals[k];return}if(!okD(g.start))g.start=today();if(g.date&&!okD(g.date))delete g.date;if(g.time&&!/^\d{1,2}:\d{2}$/.test(g.time))delete g.time;g.days=Math.max(1,Math.min(5,Math.round(cn(g.days,5))||3));g.min=Math.round(cn(g.min,180))||45;if(g.wd)g.wd=(Array.isArray(g.wd)?g.wd:[]).map(function(x){return Math.round(cn(x,6))}).filter(function(x){return x>=0})});
+ if(S.tests)Object.keys(S.tests).forEach(function(k){S.tests[k]=(Array.isArray(S.tests[k])?S.tests[k]:[]).filter(function(t){return t&&okD(t.d)})});
+ if(S.wrSeen)Object.keys(S.wrSeen).forEach(function(k){if(!okD(S.wrSeen[k]))delete S.wrSeen[k]});
+ if(S.season&&!(okD(S.season.date)))S.season=null;if(S.season)S.season.name=cs(S.season.name,60)}
+function clCleanM(m){var fo={};"wkahp".split("").forEach(function(c){fo[c]=Math.max(0,Math.round(cn(m.fo&&m.fo[c],9999)))});
+ return{_id:cid(m._id),n:cs(m.n,40)||"?",rk:m.rk!==false,pts:cn(m.pts,1e7),ri:Math.max(0,Math.min(RANKS.length-1,Math.round(cn(m.ri,99)))),d28:Math.max(0,Math.round(cn(m.d28,28))),sk:Math.round(cn(m.sk,9999)),
+  imp:m.imp==null?null:Math.round(cn(m.imp,1000)),prs:(Array.isArray(m.prs)?m.prs:[]).slice(0,6).filter(function(p){return p&&okD(p.d)}).map(function(p){return{k:cs(p.k,60),v:cs(p.v,60),d:p.d}}),fo:fo,km:Math.max(0,cn(m.km,1e6)),u:cn(m.u,1e14)}}
+function clCleanK(k){return{_id:cid(k._id),fu:cid(k.fu),f:cs(k.f,40),to:cid(k.to),x:cs(k.x,200),t:cn(k.t,1e14)}}
+function clCleanMeta(m){if(m._id==="challenge")return{title:cs(m.title,80)||"Gemeinsame Kilometer",target:Math.max(1,cn(m.target,1e6)),start:okD(m.start)?m.start:"",end:okD(m.end)?m.end:""};
+ if(m._id==="season")return okD(m.date)?{name:cs(m.name,60)||"Saisonstart",date:m.date}:null;return null}
+function vPrivacy(){return'<div class="card"><h3>Datenschutz & Sicherheit</h3><ul style="margin:8px 0 0;padding-left:20px;font-size:14px"><li>Ohne Mannschafts-Verbindung bleiben alle Daten im Browser auf diesem Gerät. Die App lädt keine Schriften, Werbung oder Analyse-Dienste von außen.</li><li>Mit Verbindung werden Vorname, Rang, Trainingstage, Kilometer, Verbesserung in %, Bestleistungen der letzten 14 Tage und die Schwerpunkt-Zähler bei Google Firebase (Rechenzentrum Frankfurt) unter dem Mannschafts-Code gespeichert. Die Anmeldung ist anonym.</li><li>Tagebuch, Tagesform und Fitness-Check verlassen das Gerät nie.</li><li>„Verbindung trennen“ löscht deinen Eintrag in der Mannschaft.</li><li>Übungsvorschläge über GitHub sind öffentlich sichtbar.</li></ul><button style="width:100%;margin-top:12px" onclick="wipeAll()">Alle Daten auf diesem Gerät löschen</button></div>'}
+function wipeAll(){if(!confirm("Wirklich alle Trainingsdaten auf diesem Gerät löschen? Das kann nicht rückgängig gemacht werden. Mach vorher eine Datensicherung, wenn du sie behalten willst."))return;
+ var go=function(){["kutter1","kutter-db","kutter_me","kutter_theme","kutter_cloud"].forEach(function(k){try{localStorage.removeItem(k)}catch(x){}});location.reload()};
+ if(clOn()&&CS.uid)clReq("/members/"+CS.uid,{method:"DELETE"}).then(go,go);else go()}
 /* ===== Verknüpfung ===== */
 var CC=["var(--c1)","var(--c2)","var(--c3)","var(--c4)"];
 function teamCov(){var c={w:0,k:0,a:0,h:0,p:0},tot=0;
