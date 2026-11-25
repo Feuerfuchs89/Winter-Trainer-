@@ -12,15 +12,15 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 Barlow,system
 h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",sans-serif;margin:0;font-weight:700;letter-spacing:.01em}
 h3{font-size:21px;line-height:1.15}
 /* Kopfzeile */
-header.top{position:relative;display:flex;align-items:center;gap:12px;padding:calc(12px + env(safe-area-inset-top,0px)) 16px 12px;background:var(--card);color:var(--ink);border-bottom:1px solid var(--line)}
+header.top{position:relative;display:flex;align-items:center;gap:10px;padding:calc(12px + env(safe-area-inset-top,0px)) 16px 12px;background:var(--card);color:var(--ink);border-bottom:1px solid var(--line)}
 
-.badge{flex:none;width:58px;height:44px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
-.badge img{width:46px;height:auto;display:block}
-header.top h1{font-size:25px;line-height:1}
+.badge{flex:none;width:52px;height:40px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
+.badge img{width:42px;height:auto;display:block}
+header.top h1{font-size:23px;line-height:1;white-space:nowrap}
 header.top .club{margin:3px 0 0;font-size:13px;font-weight:600;color:var(--mute);letter-spacing:.02em}
 header.top .sub{margin:1px 0 0;font-size:12px;color:var(--mute)}
 header.top .sub:empty{display:none}
-.gear{margin-left:auto;flex:none;width:44px;height:44px;min-height:0;padding:0;border-radius:14px;border:0!important;background:var(--soft)!important;color:var(--ink)!important;display:flex;align-items:center;justify-content:center;z-index:1}
+.gear{margin-left:auto;flex:none;width:40px;height:40px;min-height:0;padding:0;border-radius:12px;border:0!important;background:var(--soft)!important;color:var(--ink)!important;display:flex;align-items:center;justify-content:center;z-index:1}
 .gear.on{background:var(--pri)!important;color:var(--pri-ink)!important}
 main{padding:4px 14px;max-width:640px;margin:0 auto;position:relative}
 /* Karten */
@@ -86,7 +86,7 @@ details.card>summary{font-weight:700;cursor:pointer;list-style:none;display:flex
 .steps{display:flex;gap:6px;margin:10px 0 2px}.steps i{flex:1;height:5px;border-radius:3px;background:var(--soft)}.steps i.on{background:var(--pri)}
 .search{position:relative}.search input{padding-left:38px}.search:before{content:"🔍";position:absolute;left:12px;top:12px;font-size:15px;opacity:.6}
 </style></head><body>
-<header class="top"><div class="badge"><img src="lsc-logo.png" alt="Wimpel des Leipziger Seesportclub e.V."></div><div><h1>Winter-Training</h1><p class="club">Leipziger Seesportclub e.V.</p><p class="sub" id="sub"></p></div><button class="gear" id="gear" onclick="setTab('team')" aria-label="Team und Einstellungen"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button></header>
+<header class="top"><div class="badge"><img src="lsc-logo.png" alt="Wimpel des Leipziger Seesportclub e.V."></div><div><h1>Winter-Training</h1><p class="club">Leipziger Seesportclub e.V.</p><p class="sub" id="sub"></p></div><div style="margin-left:auto;display:flex;gap:6px;z-index:1"><button class="gear" id="thm" onclick="togTheme()" aria-label="Hell- oder Dunkelmodus"></button><button class="gear" id="gear" onclick="setTab('team')" aria-label="Team und Einstellungen"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button></div></header>
 <main id="m"></main>
 <nav id="nav"></nav><div id="tm" role="dialog" aria-label="Timer"></div>
 <script>
@@ -806,6 +806,13 @@ function exFind(q){var r=el("exr");if(!r)return;q=q.trim().toLowerCase();if(!q){
  var m=S.lib.filter(function(e){return e.name.toLowerCase().indexOf(q)>=0}).slice(0,8);
  r.innerHTML=m.length?m.map(function(e){return'<button class="sm" style="margin:6px 6px 0 0" onclick="sel.ex=\''+e.id+'\';render()">'+esc(e.name)+'</button>'}).join(""):'<p class="last" style="margin:6px 0 0">Nichts gefunden – eigene Übungen legst du über ⚙️ an.</p>'}
 function recentEx(){var seen={},out=[];S.logs.slice().sort(function(a,b){return a.d<b.d?1:a.d>b.d?-1:0}).forEach(function(l){if(out.length<5&&!seen[l.ex]&&lib(l.ex)){seen[l.ex]=1;out.push(l.ex)}});return out}
+/* Hell/Dunkel */
+var SUN='<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>',MOON='<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+function isDark(){var t=document.documentElement.getAttribute("data-theme");return t?t==="dark":window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches}
+function applyTheme(t){if(t)document.documentElement.setAttribute("data-theme",t);var d=isDark(),b=el("thm");if(b){b.innerHTML=d?SUN:MOON;b.setAttribute("aria-label",d?"Hellmodus einschalten":"Dunkelmodus einschalten");b.title=d?"Hell":"Dunkel"}
+ document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){m.setAttribute("content",d?"#191E2E":"#FFFFFF");m.removeAttribute("media")})}
+function togTheme(){var t=isDark()?"light":"dark";try{localStorage.setItem("kutter_theme",t)}catch(x){}applyTheme(t)}
+(function(){var t=null;try{t=localStorage.getItem("kutter_theme")}catch(x){}applyTheme(t);if(window.matchMedia)try{matchMedia("(prefers-color-scheme: dark)").addEventListener("change",function(){applyTheme(null)})}catch(x){}})();
 if("serviceWorker" in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register("sw.js").catch(function(){});
 load();fixCats();render();loadExt();
 </script></body></html>
