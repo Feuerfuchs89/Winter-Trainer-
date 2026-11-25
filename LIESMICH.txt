@@ -2,3 +2,9 @@ Alle Dateien liegen direkt nebeneinander, ohne Unterordner.
 Alle 9 Dateien (ohne diese Textdatei) in dasselbe Verzeichnis des Repositorys hochladen,
 index.html muss ganz oben im Hauptverzeichnis stehen.
 Danach in Settings > Pages: Branch main, Ordner / (root).
+
+Neu in dieser Version:
+- Home-Bereich (erster Reiter): Stand-Auswertung, Kennzahlen, Entwicklungskurven, persönliche Bestleistungen
+- Neue Übungen im Block Calisthenics: Klimmzüge, Klimmzüge Untergriff, Dips, Hängendes Knieheben
+- Körpergewicht-Übungen: Feld „+ kg“ für Zusatzgewicht (Weste, Dip-Gürtel)
+- Bestehende Daten bleiben erhalten, die neuen Übungen werden automatisch ergänzt

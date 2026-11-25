@@ -1,4 +1,4 @@
-const CACHE = "kutter-v3";
+const CACHE = "kutter-v4";
 const FILES = ["./", "./index.html", "./manifest.webmanifest", "./apple-touch-icon.png",
   "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png", "./icon.svg"];
 self.addEventListener("install", e => {
