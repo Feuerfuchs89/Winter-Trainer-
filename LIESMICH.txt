@@ -1,21 +1,41 @@
+LSC WINTER-TRAINING – Leipziger Seesportclub e.V.
 Alle Dateien liegen direkt nebeneinander, ohne Unterordner.
-Alle 12 Dateien (ohne diese Textdatei) in dasselbe Verzeichnis des Repositorys hochladen,
-index.html muss ganz oben im Hauptverzeichnis stehen.
-Danach in Settings > Pages: Branch main, Ordner / (root).
+Alle Dateien (ohne diese Textdatei) ins Hauptverzeichnis des Repos hochladen.
+GitHub Pages: Settings > Pages > Branch main, Ordner / (root).
 
-NEU
-- Design in Vereinsfarben mit LSC-Wimpel, neue App-Icons
-- Team & Einstellungen über das Zahnrad oben rechts
-- Home: Stand-Auswertung, "Mein Ziel" mit persönlichem Wochenplan, Kurven, Bestleistungen, Mannschaftsziel
-- Mannschaftsziel "Saisonvorbereitung Kutter" mit 5 Schwerpunkten, Begründung und Abdeckung (Reiter Plan)
-- Messarten: Sätze x Wdh x kg, Sekunden, Distanz + Zeit (Pace), Dauer + Intensität
-- Neue Blöcke: Mobilität & Prävention, Ausdauer, Sport & Spiel (Tennis, Badminton, Tischtennis ...)
+======================================================
+GEMEINSAMER SPEICHER EINRICHTEN (einmalig, kostenlos)
+======================================================
+Firebase (Google), Tarif "Spark" – ohne Kreditkarte.
 
-GEMEINSAMER ÜBUNGSKATALOG (uebungen.json)
-1. Nutzer legen unter Team eine eigene Übung an und tippen "Auf GitHub vorschlagen"
-   (oder schicken den Code per WhatsApp).
-2. Du öffnest den Vorschlag (GitHub > Issues), kopierst den Code "KU1:..."
-   und fügst ihn in der App unter Team > Übungskatalog verwalten ein.
-3. "uebungen.json" herunterladen und im Repo die alte Datei ersetzen.
-   Beim nächsten Öffnen haben alle die neuen Übungen.
-Wichtig: Issues müssen im Repo aktiviert sein (Settings > General > Features > Issues).
+1. https://console.firebase.google.com öffnen, mit Google-Konto anmelden.
+2. "Projekt erstellen" > Name z. B. lsc-training > Google Analytics AUS > Erstellen.
+3. Links: Erstellen > Authentication > "Jetzt starten"
+   > Reiter "Anmeldemethode" > "Anonym" > aktivieren > Speichern.
+4. Links: Erstellen > Firestore Database > "Datenbank erstellen"
+   > Standort: europe-west3 (Frankfurt) > "Im Produktionsmodus starten" > Erstellen.
+5. In Firestore den Reiter "Regeln" öffnen, alles löschen,
+   den Inhalt der Datei firestore-regeln.txt einfügen > "Veröffentlichen".
+6. Zahnrad oben links > Projekteinstellungen > Allgemein > unten "Meine Apps"
+   > Web-Symbol </> > App-Name z. B. LSC Training > Hosting NICHT anhaken > Registrieren.
+   Es erscheint "firebaseConfig". Davon brauchst du nur apiKey und projectId.
+7. Auf GitHub im Repo die Datei speicher.js öffnen > Stift (Bearbeiten)
+   > die beiden Werte zwischen die Anführungszeichen schreiben > "Commit changes".
+8. App öffnen > Zahnrad > "Mannschaft verbinden" > "Neuen Code erstellen" > "Verbinden".
+   Dann "Einladen" tippen und den Link z. B. in die WhatsApp-Gruppe schicken.
+   Wer den Link öffnet, wird automatisch mit der Mannschaft verbunden.
+
+Gut zu wissen
+- Der apiKey ist kein Passwort; geschützt wird über die Regeln und den Mannschafts-Code.
+- Geteilt werden nur Vorname und Kennzahlen (Rang, Trainingstage, Kilometer,
+  Verbesserung in %, Bestleistungen der letzten 14 Tage). Tagebuch und Tagesform bleiben auf dem Handy.
+- Wer nicht in der Rangliste erscheinen will, nimmt unter Zahnrad den Haken raus.
+- Ohne Eintrag in speicher.js läuft die App ganz normal, nur ohne Mannschaftsfunktionen.
+
+======================================================
+ÜBUNGSVORSCHLÄGE (uebungen.json)
+======================================================
+1. Eigene Übung unter Zahnrad anlegen > "Auf GitHub vorschlagen" oder Code per WhatsApp.
+2. Code "KU1:..." unter Zahnrad > Übungskatalog verwalten einfügen > übernehmen.
+3. uebungen.json herunterladen und im Repo ersetzen.
+Issues müssen eingeschaltet sein: Settings > General > Features > Issues.

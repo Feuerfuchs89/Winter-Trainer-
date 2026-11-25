@@ -1,6 +1,6 @@
-const CACHE = "kutter-v8";
+const CACHE = "kutter-v9";
 const FILES = ["./", "./index.html", "./manifest.webmanifest", "./apple-touch-icon.png",
-  "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png", "./icon.svg", "./uebungen.json", "./lsc-logo.png", "./fav.png"];
+  "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png", "./icon.svg", "./uebungen.json", "./lsc-logo.png", "./fav.png", "./speicher.js"];
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
 });
