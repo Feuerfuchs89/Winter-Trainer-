@@ -1,10 +1,21 @@
 Alle Dateien liegen direkt nebeneinander, ohne Unterordner.
-Alle 9 Dateien (ohne diese Textdatei) in dasselbe Verzeichnis des Repositorys hochladen,
+Alle 12 Dateien (ohne diese Textdatei) in dasselbe Verzeichnis des Repositorys hochladen,
 index.html muss ganz oben im Hauptverzeichnis stehen.
 Danach in Settings > Pages: Branch main, Ordner / (root).
 
-Neu in dieser Version:
-- Home-Bereich (erster Reiter): Stand-Auswertung, Kennzahlen, Entwicklungskurven, persönliche Bestleistungen
-- Neue Übungen im Block Calisthenics: Klimmzüge, Klimmzüge Untergriff, Dips, Hängendes Knieheben
-- Körpergewicht-Übungen: Feld „+ kg“ für Zusatzgewicht (Weste, Dip-Gürtel)
-- Bestehende Daten bleiben erhalten, die neuen Übungen werden automatisch ergänzt
+NEU
+- Design in Vereinsfarben mit LSC-Wimpel, neue App-Icons
+- Team & Einstellungen über das Zahnrad oben rechts
+- Home: Stand-Auswertung, "Mein Ziel" mit persönlichem Wochenplan, Kurven, Bestleistungen, Mannschaftsziel
+- Mannschaftsziel "Saisonvorbereitung Kutter" mit 5 Schwerpunkten, Begründung und Abdeckung (Reiter Plan)
+- Messarten: Sätze x Wdh x kg, Sekunden, Distanz + Zeit (Pace), Dauer + Intensität
+- Neue Blöcke: Mobilität & Prävention, Ausdauer, Sport & Spiel (Tennis, Badminton, Tischtennis ...)
+
+GEMEINSAMER ÜBUNGSKATALOG (uebungen.json)
+1. Nutzer legen unter Team eine eigene Übung an und tippen "Auf GitHub vorschlagen"
+   (oder schicken den Code per WhatsApp).
+2. Du öffnest den Vorschlag (GitHub > Issues), kopierst den Code "KU1:..."
+   und fügst ihn in der App unter Team > Übungskatalog verwalten ein.
+3. "uebungen.json" herunterladen und im Repo die alte Datei ersetzen.
+   Beim nächsten Öffnen haben alle die neuen Übungen.
+Wichtig: Issues müssen im Repo aktiviert sein (Settings > General > Features > Issues).

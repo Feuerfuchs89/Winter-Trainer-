@@ -1,14 +1,14 @@
 {
-  "name": "Kutter Winter-Training",
-  "short_name": "Kutter",
-  "description": "Kraftausdauer-Training für die Kutter-Mannschaft",
+  "name": "LSC Winter-Training",
+  "short_name": "LSC Training",
+  "description": "Winter-Training des Leipziger Seesportclub e.V.",
   "lang": "de",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#10303B",
-  "theme_color": "#10303B",
+  "background_color": "#0F195E",
+  "theme_color": "#0F195E",
   "icons": [
     {
       "src": "icon-192.png",
